@@ -101,13 +101,20 @@
                                     <constraint firstAttribute="height" constant="12" id="NWq-Oq-HnV"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <state key="normal" title="Choose your state"/>
+                                <state key="normal" title="Choose Your State"/>
+                                <connections>
+                                    <action selector="stateBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4db-PR-1Ha"/>
+                                </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HT7-31-YyW">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="MHd-xp-BQi"/>
                                     <constraint firstAttribute="height" constant="100" id="gdt-Am-K5b"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="hl2-1s-Ao5"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ybu-OS-3pW"/>
+                                </connections>
                             </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -158,6 +165,7 @@
                     </view>
                     <connections>
                         <outlet property="statePicker" destination="HT7-31-YyW" id="fbJ-MU-wZ9"/>
+                        <outlet property="statePickerBtn" destination="Nyi-7B-MN8" id="H2W-Wg-2qB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
