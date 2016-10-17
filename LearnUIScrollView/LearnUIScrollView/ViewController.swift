@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        for i in 0...11 {
+        for i in 0...7 {
             let image = UIImage (named: "image\(i).jpg")
             let imageView = UIImageView (image: image)
             images.append(imageView)
@@ -42,9 +42,15 @@ class ViewController: UIViewController {
 
     
     @IBAction func handleImageDidTap(gestureRecognizer: UITapGestureRecognizer){
-        let alertController = UIAlertController(title: nil, message: "You are tapped at\(gestureRecognizer.location(in: self.scrollView))", preferredStyle: UIAlertControllerStyle.alert)
-        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.cancel, handler: {(alert: UIAlertAction!) in print("Foo")}))
-        self.present(alertController, animated:true, completion: nil)
+        var point  = gestureRecognizer.location(in: self.scrollView)
+        var webViewVCStoryboard = UIStoryboard(name: "WebView", bundle: nil)
+        var wv = webViewVCStoryboard.instantiateViewController(withIdentifier: "webView") as! WebViewController
+        wv.linkIndex = Int(point.x)/Int(view.frame.width);
+        present(wv, animated: true, completion: nil)
+        
+//        let alertController = UIAlertController(title: nil, message: "You are tapped at\(gestureRecognizer.location(in: self.scrollView))", preferredStyle: UIAlertControllerStyle.alert)
+//        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.cancel, handler: {(alert: UIAlertAction!) in print("Foo")}))
+//        self.present(alertController, animated:true, completion: nil)
     }
 }
 

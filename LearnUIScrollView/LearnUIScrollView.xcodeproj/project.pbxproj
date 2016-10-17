@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8409DA7B1DB5084E00A197D1 /* WebView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8409DA7A1DB5084E00A197D1 /* WebView.storyboard */; };
+		8409DA7F1DB508E300A197D1 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8409DA7E1DB508E300A197D1 /* WebViewController.swift */; };
+		8409DA821DB50B1000A197D1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8409DA811DB50B1000A197D1 /* MapKit.framework */; };
 		84934BEF1DB385B700574077 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84934BEE1DB385B700574077 /* AppDelegate.swift */; };
 		84934BF11DB385B700574077 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84934BF01DB385B700574077 /* ViewController.swift */; };
 		84934BF41DB385B700574077 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84934BF21DB385B700574077 /* Main.storyboard */; };
@@ -15,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8409DA7A1DB5084E00A197D1 /* WebView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WebView.storyboard; sourceTree = "<group>"; };
+		8409DA7E1DB508E300A197D1 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebViewController.swift; path = ../WebViewController.swift; sourceTree = "<group>"; };
+		8409DA811DB50B1000A197D1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		84934BEB1DB385B700574077 /* LearnUIScrollView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnUIScrollView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84934BEE1DB385B700574077 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84934BF01DB385B700574077 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +35,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8409DA821DB50B1000A197D1 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8409DA801DB50B0F00A197D1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8409DA811DB50B1000A197D1 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		84934BE21DB385B700574077 = {
 			isa = PBXGroup;
 			children = (
 				84934BED1DB385B700574077 /* LearnUIScrollView */,
 				84934BEC1DB385B700574077 /* Products */,
+				8409DA801DB50B0F00A197D1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +72,8 @@
 			children = (
 				84934BEE1DB385B700574077 /* AppDelegate.swift */,
 				84934BF01DB385B700574077 /* ViewController.swift */,
+				8409DA7E1DB508E300A197D1 /* WebViewController.swift */,
+				8409DA7A1DB5084E00A197D1 /* WebView.storyboard */,
 				84934BF21DB385B700574077 /* Main.storyboard */,
 				84934BF51DB385B700574077 /* Assets.xcassets */,
 				84934BF71DB385B700574077 /* LaunchScreen.storyboard */,
@@ -98,6 +116,14 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 99687A7687;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -126,6 +152,7 @@
 			files = (
 				84934BF91DB385B700574077 /* LaunchScreen.storyboard in Resources */,
 				84934BF61DB385B700574077 /* Assets.xcassets in Resources */,
+				8409DA7B1DB5084E00A197D1 /* WebView.storyboard in Resources */,
 				84934BF41DB385B700574077 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84934BF11DB385B700574077 /* ViewController.swift in Sources */,
+				8409DA7F1DB508E300A197D1 /* WebViewController.swift in Sources */,
 				84934BEF1DB385B700574077 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,6 +330,7 @@
 				84934BFF1DB385B700574077 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

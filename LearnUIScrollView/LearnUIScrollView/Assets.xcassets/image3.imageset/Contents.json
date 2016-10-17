@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "flash.jpg",
+      "filename" : "hulk1.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "flash@2x.jpg",
+      "filename" : "hulk1@2x.jpg",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "flash@3x.jpg",
+      "filename" : "hulk1@3x.jpg",
       "scale" : "3x"
     }
   ],
