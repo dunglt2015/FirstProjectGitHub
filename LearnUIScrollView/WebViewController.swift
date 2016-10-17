@@ -19,8 +19,6 @@ class WebViewController: UIViewController {
                     "http://phimbathu.com/xem-phim/phim-captain-america-3-noi-chien-sieu-anh-hung-captain-america-3-civil-war-2016-2304",
                     "http://phimbathu.com/xem-phim/phim-biet-doi-sieu-anh-hung-2-de-che-ultron-the-avengers-2-age-of-ultron-2015-1463"]
     @IBOutlet weak var webView: UIWebView!
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         let request = NSURLRequest(url: NSURL(string:listLink[linkIndex]) as! URL)
@@ -29,7 +27,6 @@ class WebViewController: UIViewController {
     
     @IBAction func backBtnTapped(_ sender: AnyObject) {
         self.dismiss(animated: false, completion: nil)
-            print("done")
     }
     // MARK: - Navigation
 
